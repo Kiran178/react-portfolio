@@ -1,0 +1,61 @@
+@import "../../styles/variables";
+
+#sidebar {
+  width: 11rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $bgSidebar;
+  .personalDetails {
+    text-decoration: none;
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    h2 {
+      font-size: 100px;
+      color: $textWhite;
+    }
+    h4 {
+      color: $textWhite;
+      padding-top: 5px;
+    }
+    p {
+      color: $textGray;
+      padding-top: 8px;
+      font-size: 12px;
+    }
+  }
+  .navItems {
+    .navLink:nth-child(1) {
+      border-top: 1px solid $border;
+      margin-top: 50px;
+    }
+    .navLink:nth-last-child(1) {
+      margin-bottom: 20px;
+    }
+    .navLink {
+      color: $textGray;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 15px 0px;
+      border-bottom: 1px solid $border;
+    }
+  }
+  .navIcons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    .navIcon {
+      font-size: 25px;
+      color: $textWhite;
+    }
+  }
+}

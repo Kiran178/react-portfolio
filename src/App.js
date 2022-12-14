@@ -1,4 +1,4 @@
-import { RouterProvider } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import router from "./Routes";
 import Sidebar from "./components/sidebar/Sidebar";
 
@@ -6,7 +6,13 @@ function App() {
   return (
     <>
       <Sidebar />
-      <RouterProvider router={router} />
+      <div className='App'>
+        <Routes>
+          {router.map((items) => (
+            <Route path={items.path} key={items.path} element={items.element} />
+          ))}
+        </Routes>
+      </div>
     </>
   );
 }
